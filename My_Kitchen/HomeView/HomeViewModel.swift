@@ -40,7 +40,7 @@ class HomeViewVM: ObservableObject {
         data2.append(rice1)
         data2.append(rice2)
         data2.append(rice3)
-        data3.append(seaFood1)
+        data3.append(seaFood1) 
         data3.append(seaFood2)
         data3.append(seaFood3)
         let model1 = HomeModel(id: "111", foodType: "Other Country Foods",data: data1)
