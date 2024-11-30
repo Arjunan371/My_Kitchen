@@ -131,9 +131,7 @@ struct HomeView: View {
         Button(action: {
             let model = viewModel.kitchenData[typeIndex].data?[index]
             viewModel.kitchenData[typeIndex].data?[index].isSelect.toggle()
-            if viewModel.kitchenData[typeIndex].data?[index].isSelect == true {
                 viewModel.save(model: model, typeIndex: typeIndex, index: index, context: viewContext)
-            }
         }, label: {
             Image(systemName: viewModel.kitchenData[typeIndex].data?[index].isSelect == true ? "star.fill" : "star")
         })
@@ -144,7 +142,7 @@ struct HomeView: View {
     private func cartView(typeIndex: Int, index: Int) -> some View {
         Button(action: {
             let model = viewModel.kitchenData[typeIndex].data?[index]
-            viewModel.kitchenData[typeIndex].data?[index].isAddToCart.toggle()
+            viewModel.kitchenData[typeIndex].data?[index].isAddToCart = true
             if viewModel.kitchenData[typeIndex].data?[index].isAddToCart == true {
                 viewModel.save(model: model, typeIndex: typeIndex, index: index, context: viewContext)
             }

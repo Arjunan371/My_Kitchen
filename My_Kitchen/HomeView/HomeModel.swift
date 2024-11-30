@@ -8,12 +8,12 @@
 import Foundation
 
 struct HomeModel {
-    var id = UUID().uuidString
+    var id: String?
     var foodType: String?
     var data: [HomeModel.HomeModelData]?
     
     struct HomeModelData {
-        var id = UUID().uuidString
+        var id: String?
         var image: String?
         var name: String?
         var price: String?
